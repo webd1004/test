@@ -1,0 +1,131 @@
+@import url(common.css);
+
+body{
+  background:url(../image/bg.jpg);
+	color:#666;
+	font-family:Arial, Helvetica, sans-serif;
+}
+#wrap{
+	width:1100px;
+	margin:0 auto;
+}
+header, section, footer{width:inherit;} /*상위요소값을 상속받아 가로너비가 1100px 이 된다.*/
+
+
+/* Header_______________________ */
+
+header{height:150px;}
+
+.logo{float:left;} /*로고 왼쪽으로 배치*/
+nav{float:right;}  /*메뉴 오른쪽으로 배치*/
+
+.logo h1{
+  color:#fff;
+	font-size:32px;
+  text-transform:uppercase;
+	padding-top:65px;
+	padding-left:20px;
+}
+
+nav ul{}
+nav ul li{
+  float:left;
+  line-height:150px;
+  color:#fff;
+  font-size:16px;
+  padding:0 20px;
+}
+nav ul li a{display:block;}  /*링크의 오버영역을 글자를 포함한 주변여백까지 설정
+a태그는 inline형식의 태그이므로 글자부분만 영역이 설정됨
+*/
+
+/* nav ul li:hover{background:#502e14;} ->무조건 모든 li에 오버효과를 줌*/
+
+/*클래스active를 제외한 나머지에만 오버적용*/
+nav ul li:not(.active):hover{background:#502e14;} 
+
+/*현재 위치 활성화(오버효과가 바로 보이는 상태를 말함)*/
+nav ul li.active{background:#502e14;}
+
+
+/* Section_______________________ */
+
+section{
+  border-top:15px solid #502e14;
+  background:#fff;
+  padding:80px;
+}
+hr{ /*맨위제목 위의 가로선*/
+  width:200px;
+	height:3px;
+	background:#ff760d; 
+  border:none;
+  margin:0 auto;
+}
+section h2{
+  text-align:center;
+	font-size:32px;
+	padding-top:10px;
+	padding-bottom:80px;	
+}
+
+p{ /*문서내에 있는 모든 p에 적용*/
+	padding:50px 0;
+	line-height:23px;
+}
+
+
+.content-list, .content-img{float:left;}
+.content-list{width:550px;}
+.content-img{width:390px;}
+
+.content-list ul{padding-left:100px;}
+.content-list ul li{
+  font-weight:bold;
+  list-style-image:url(../image/list.png);
+  line-height:30px;
+}
+
+.content-img .bg-img{   /*상단오른쪽 팬더이미지 동그랗게~*/
+  width:300px;
+	height:300px;
+	background:url(../image/panda-bg.jpg);
+	border-radius:50%;
+  margin-left:100px;
+}
+
+.section-wrap1 .btn{  /*more버튼*/
+  width:120px;
+	height:30px;
+  background:#000;
+  color:#fff;
+  border-radius:50px;
+  font-weight:bold;
+  text-align:center;
+	line-height:30px;
+  margin:0 auto;
+}
+
+
+.section-wrap2{margin-top:50px;}
+.section-wrap2 h3{
+  text-align:center;
+  font-size:24px;
+}
+
+.img-list{text-align:center;}
+.img-list ul{display:inline-block;}
+.img-list ul li{float:left;}
+.img-list ul li:nth-child(2){margin:0 15px;}
+
+
+/* Footer ________________________ */
+
+footer{
+  text-align:center;
+  padding:30px 0;
+}
+footer address{
+  color:#fff;
+  font-style:normal;  /*시멘틱태그 <address>에 기본적으로 있는 기울임을 해제*/
+}
